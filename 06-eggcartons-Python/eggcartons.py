@@ -7,4 +7,6 @@ import math
 
 def fun_eggcartons(eggs):
     # your code goes here
-    return int(math.ceil(eggs/12))
+    if eggs == 0:
+        return 0
+    return int(eggs/12)
