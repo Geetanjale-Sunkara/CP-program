@@ -26,7 +26,7 @@ class Classy(object):
 
     def classiness(self):
         pnts = 0
-        for i in range(self.items.length):
+        for i in range(len(self.items)):
             if (self.items[i] == "tophat"):
                 pnts += 2
             elif (self.items[i] == "bowtie"):
