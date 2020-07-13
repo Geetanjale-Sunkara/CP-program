@@ -9,4 +9,4 @@ def fun_eggcartons(eggs):
     # your code goes here
     if eggs == 0:
         return 0
-    return int(eggs/12)
+    return eggs/12
