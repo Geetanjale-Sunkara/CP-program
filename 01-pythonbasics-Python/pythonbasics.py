@@ -3,7 +3,7 @@
 # 5 times, where each sentence is separated by a single space.
 # Return the string with "return".
 # You can only have the string once in your code.
-# Don't just copy/paste it 5 times into a single variable!
+# Don't just copy/paste it 5 times into a single variable
 
 
 def show_excitement():
