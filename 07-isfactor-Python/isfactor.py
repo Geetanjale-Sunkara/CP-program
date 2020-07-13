@@ -11,7 +11,7 @@ def fun_isfactor(f, n):
             return True
         else:
             return False
-    elif (math.ceil(n/f*1.0) == int(n/f)):
+    elif (math.ceil(n/(f*1.0)) == int(n/f)):
         return True
     else:
         return False  # replace with your solution
