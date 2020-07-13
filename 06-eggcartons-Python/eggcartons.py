@@ -1,3 +1,4 @@
+import math
 # Write the function eggCartons(eggs) that takes
 # a non-negative integer number of eggs, and returns
 # the smallest integer number of cartons required to hold
@@ -6,4 +7,4 @@
 
 def fun_eggcartons(eggs):
     # your code goes here
-    return eggs/12
+    return math.ceil(eggs/12)
