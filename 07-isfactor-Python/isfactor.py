@@ -6,7 +6,7 @@ import math
 
 
 def fun_isfactor(f, n):
-    if (math.ceil(f/(n*1.0)) == f/n):
+    if (math.ceil(f/(n)) == f/n):
         return True
     else:
         return False  # replace with your solution
