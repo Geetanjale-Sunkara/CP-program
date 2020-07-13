@@ -1,3 +1,4 @@
+import math
 # Write the function isFactor(f, n) that takes
 # two int values f and n, and returns True
 # if f is a factor of n, and False otherwise.
@@ -7,4 +8,4 @@
 def fun_isfactor(f, n):
     if (math.ceil(f/(n*1.0)) == f/n):
         return True
-        return False  # replace with your solution
+    return False  # replace with your solution
