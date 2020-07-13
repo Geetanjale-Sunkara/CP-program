@@ -6,7 +6,12 @@ import math
 
 
 def fun_isfactor(f, n):
-    if (math.ceil(f/n) == f/n) or (f != 0 and n == 0) or (f == 0 and n == 0):
+    if (n == 0):
+        if (f == 0):
+            return True
+        else:
+            return False
+    elif (math.ceil(f/n) == f/n):
         return True
     else:
         return False  # replace with your solution
