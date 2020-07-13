@@ -13,7 +13,7 @@ def fun_getinrange(x, bound1, bound2):
         bound2 = bound1
     if (bound1 < x) and (x < bound2):
         return x
-    elif bound1 < x:
+    elif bound1 > x:
         return bound1
     else:
         return bound2
