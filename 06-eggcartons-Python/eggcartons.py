@@ -7,6 +7,4 @@ import math
 
 def fun_eggcartons(eggs):
     # your code goes here
-    if eggs == 0:
-        return 0
-    return eggs/12.0
+    return math.ceil(eggs/12.0)
