@@ -8,4 +8,5 @@ import math
 def fun_isfactor(f, n):
     if (math.ceil(f/(n*1.0)) == f/n):
         return True
-    return False  # replace with your solution
+    else:
+        return False  # replace with your solution
