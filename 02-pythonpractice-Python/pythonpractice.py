@@ -20,11 +20,11 @@ class Classy(object):
     def __init__(self):
         self.items = []
 
-    def addItem(x):
+    def addItem(self, x):
         self.items.append(x)
         return
 
-    def classiness():
+    def classiness(self):
         pnts = 0
         for i in range(self.items.length):
             if (self.items[i] == "tophat"):
