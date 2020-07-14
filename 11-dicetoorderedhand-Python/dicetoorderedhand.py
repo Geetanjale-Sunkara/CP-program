@@ -16,4 +16,4 @@ def dicetoorderedhand(a, b, c):
     # your code goes here
     l = [a, b, c]
     l.sort()
-    return l[0]*100+l[1]*10+l[2]
+    return l[2]*100+l[1]*10+l[0]
