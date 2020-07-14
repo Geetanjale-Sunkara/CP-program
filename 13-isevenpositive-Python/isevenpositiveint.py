@@ -7,7 +7,7 @@
 
 def isevenpositiveint(x):
     # your code goes here
-    if (type(x) == "integer" and x % 2 == 0 and x > 0):
+    if (isinstance(x, int) and x % 2 == 0 and x > 0):
         return True
     else:
         return False
