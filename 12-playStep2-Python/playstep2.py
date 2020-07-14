@@ -28,6 +28,42 @@
 # into a sorted hand.
 # Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
 
+
 def playstep2(hand, dice):
-	# your code goes here
-	pass
+    # your code goes here
+    h = str(hand)
+    d = str(dice)
+    th = tuple(map(int, list(h)))
+    td = tuple(map(int, list(d)))
+    if (th[0] == th[1]):
+        th[2] = td[len(td)-1]
+        td.pop(len(td)-1)
+    elif th[1] == th[2]:
+        th[0] = td[len(td)-1]
+        td.pop(len(td)-1)
+    elif th[0] == th[2]:
+        th[1] = td[len(td)-1]
+        td.pop(len(td)-1)
+    elif th[0] > th[1] and th[0] > th[2]:
+        th[1] = td[len(td)-1]
+        td.pop(len(td)-1)
+        th[2] = td[len(td)-1]
+        td.pop(len(td)-1)
+    elif th[1] > th[0] and th[1] > th[2]:
+        th[0] = td[len(td)-1]
+        td.pop(len(td)-1)
+        th[2] = td[len(td)-1]
+        td.pop(len(td)-1)
+    elif th[2] > th[1] and th[2] > th[0]:
+        th[0] = td[len(td)-1]
+        td.pop(len(td)-1)
+        th[1] = td[len(td)-1]
+        td.pop(len(td)-1)
+    th.sort()
+    hh = th[2]*100+th[1]*10+th[0]
+    l = len(td)
+    dd = 0
+    for i in range(len(td)):
+        dd += td[i]*(10**l)
+        l -= 1
+    return (hh, dd)
