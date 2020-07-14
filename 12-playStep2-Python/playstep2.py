@@ -61,9 +61,9 @@ def playstep2(hand, dice):
         td.pop(len(td)-1)
     th.sort()
     hh = th[2]*100+th[1]*10+th[0]
-    l = len(td)
+    l = len(td)-1
     dd = 0
-    for i in range(len(td)-1):
+    for i in range(len(td)):
         dd += td[i]*(10**l)
         l -= 1
     return (hh, dd)
