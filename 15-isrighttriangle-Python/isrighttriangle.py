@@ -1,3 +1,4 @@
+import math
 # isrighttriangle(x1, y1, x2, y2, x3, y3)[5pts]
 # Write the function isrighttriangle(x1, y1, x2, y2, x3, y3) that takes 6 int or float values that
 # represent the vertices (x1,y1), (x2,y2), and (x3,y3) of a triangle, and returns True if that is
@@ -5,6 +6,9 @@
 # distance(x1, y1, x2, y2), which you might call several times. Also, remember to use
 # almostEqual (instead of ==) when comparing floats.
 
+
 def isrighttriangle(x1, y1, x2, y2, x3, y3):
-	# your code goes here
-	pass
+    # your code goes here
+    s1 = math.sqrt((x2-x1)**2+(y2-y1)**2)
+    s2 = math.sqrt((x3-x2)**2+(y3-y2)**2)
+    s3 = math.sqrt((x3-x1)**2+(y3-y1)**2)
