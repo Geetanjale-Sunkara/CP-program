@@ -9,4 +9,4 @@
 def handtodice(hand):
     # your code goes here
     h = str(hand)
-    return list(map(int, list(h)))
+    return tuple(map(int, list(h)))
