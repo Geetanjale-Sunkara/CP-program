@@ -12,3 +12,7 @@ def isrighttriangle(x1, y1, x2, y2, x3, y3):
     s1 = math.sqrt((x2-x1)**2+(y2-y1)**2)
     s2 = math.sqrt((x3-x2)**2+(y3-y2)**2)
     s3 = math.sqrt((x3-x1)**2+(y3-y1)**2)
+    if (s1**2 == (s2**2+s3**2) or s2**2 == (s1**2+s3**2) or s3**2 == (s2**2+s1**2)):
+        return True
+    else:
+        return False
