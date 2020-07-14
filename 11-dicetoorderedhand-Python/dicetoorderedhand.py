@@ -11,6 +11,9 @@
 # Hint: You can use max(a,b,c) to find the largest of 3 values, and
 # min(a,b,c) to find the smallest.
 
+
 def dicetoorderedhand(a, b, c):
-	# your code goes here
-	pass
+    # your code goes here
+    l = [a, b, c]
+    l.sort()
+    return
