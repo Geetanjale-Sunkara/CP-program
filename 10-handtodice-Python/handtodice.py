@@ -8,4 +8,5 @@
 
 def handtodice(hand):
     # your code goes here
-    return list(map(int, list((str(hand)+"").strip())))
+    h = str(hand)
+    return list(map(int, list(h)))
