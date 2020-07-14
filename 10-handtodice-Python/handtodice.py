@@ -5,6 +5,7 @@
 # assert(handToDice(422) == (4,2,2))
 # Hint: You might find // and % useful here, and also getKthDigit().
 
+
 def handtodice(hand):
-	# your code goes here
-	pass
+    # your code goes here
+    return list(map(int, list(hand.strip())))
