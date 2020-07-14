@@ -1,3 +1,4 @@
+import math
 # Write the function isMultiple that takes two int values m and n
 # and returns True if m is a multiple of n and False otherwise.
 # Note that 0 is a multiple of every integer including itself.
@@ -5,12 +6,12 @@
 
 
 def fun_ismultiple(m, n):
-    if (f == 0):
-        if (n == 0):
+    if n == 0:
+        if m == 0:
             return True
         else:
             return False
-    elif (math.ceil(n/(f*1.0)) == int(n/f)):
+    elif math.ceil(m/n*1.0) == m/n:
         return True
     else:
         return False
