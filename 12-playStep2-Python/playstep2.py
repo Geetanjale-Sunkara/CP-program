@@ -33,8 +33,8 @@ def playstep2(hand, dice):
     # your code goes here
     h = str(hand)
     d = str(dice)
-    th = tuple(map(int, list(h)))
-    td = tuple(map(int, list(d)))
+    th = list(map(int, list(h)))
+    td = list(map(int, list(d)))
     if (th[0] == th[1]):
         th[2] = td[len(td)-1]
         td.pop(len(td)-1)
@@ -63,7 +63,7 @@ def playstep2(hand, dice):
     hh = th[2]*100+th[1]*10+th[0]
     l = len(td)
     dd = 0
-    for i in range(len(td)):
+    for i in range(len(td)-1):
         dd += td[i]*(10**l)
         l -= 1
     return (hh, dd)
