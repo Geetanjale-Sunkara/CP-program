@@ -40,7 +40,7 @@ locations['Egypt']['Africa'] = ['Cairo']
 
 
 def sortUSA():
-    return locations['North America']['USA'].sort()
+    return sorted(locations['North America']['USA'])
 
 
 def alphaAsia():
