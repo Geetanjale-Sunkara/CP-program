@@ -8,4 +8,10 @@ import math
 
 
 def fun_pascaltrianglevalue(row, col):
-    return math.factorial(row)
+    res = 1
+    if (col > row-col):
+        return 0
+    for i in range(0, col):
+        res = res*(row-i)
+        res = res//(i+1)
+    return res
