@@ -8,7 +8,9 @@
 def fun_set_kth_digit(n, k, d):
     dd = list(str(n))
     dd = dd[::-1]
-    if (dd[k] == "-"):
+    if(dd[k] != "-"):
+        dd[k] = str(d)
+    else:
         dd.append("-")
-    dd[k] = str(d)
+        dd[k] = str(d)
     return int("".join(dd[::-1]))
