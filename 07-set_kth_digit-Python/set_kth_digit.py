@@ -11,4 +11,4 @@ def fun_set_kth_digit(n, k, d):
     if (dd[k] == "-"):
         dd.append("-")
     dd[k] = str(d)
-    return "".join(str(dd[::-1]))
+    return int("".join(dd[::-1]))
