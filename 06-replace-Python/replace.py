@@ -6,10 +6,13 @@
 
 def fun_replace(s1, s2, s3):
     i = s1.find(s2)
-    out = s1
+    if (i == -1):
+        return s1
+    out = ""
     while i != -1:
-        out = s1[:i]
+        out += s1[:i]
         out += s3
-        out += s1[i+len(s2):]
-        i = s1.find(s2, i+1)
+        j = i+len(s2)
+        i = s1.find(s2, i+1, len(s1))
+    out += s1[j:]
     return out
