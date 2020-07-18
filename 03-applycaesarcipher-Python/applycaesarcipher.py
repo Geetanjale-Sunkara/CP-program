@@ -17,4 +17,4 @@ def fun_applycaesarcipher(msg, shift):
             nm += chr(ord(i)+shifts-65) % 26+65
         else:
             nm += chr(ord(i)+shifts-97) % 26+97
-        return nm
+    return nm
