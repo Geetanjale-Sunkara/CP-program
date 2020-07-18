@@ -9,6 +9,6 @@ def mostfrequentdigit(n):
     l = list(map(int, list(nn)))
     num = l[0]
     for i in l:
-        if (l.count(num) <= l.count(i)):
+        if (l.count(num) <= l.count(i) and l.count(i) != 1):
             num = i
     return num
