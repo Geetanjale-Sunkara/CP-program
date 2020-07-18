@@ -6,6 +6,7 @@
 
 def fun_replace(s1, s2, s3):
     i = s1.find(s2)
+    j = 0
     if (i == -1):
         return s1
     out = ""
