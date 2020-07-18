@@ -14,7 +14,9 @@ def fun_applycaesarcipher(msg, shift):
     nm = ""
     for i in msg:
         if (i.isupper()):
-            nm += chr(ord(i)+shifts-65) % 26+65
+            nm += chr((ord(i)+shift-65) % 26+65)
+        elif(i.islower()):
+            nm += chr((ord(i)+shift-97) % 26+97)
         else:
-            nm += chr(ord(i)+shifts-97) % 26+97
+            nm += i
     return nm
