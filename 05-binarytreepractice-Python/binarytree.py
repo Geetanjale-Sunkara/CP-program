@@ -4,6 +4,7 @@ class Node(object):
         self.left = None
         self.right = None
 
+
 class BinaryTree(object):
     def __init__(self, root):
         self.root = Node(root)
@@ -13,14 +14,25 @@ class BinaryTree(object):
         is in the tree, return
         False otherwise."""
         # Your code goes here
-        pass
+        if type(find_val) != find(self.root.value):
+            return False
+        self.ssearch(self.root, find_val)
+
+    def ssearch(self, root, value):
+        if r == None:
+            return False
+        elif find_val == r.value:
+            return True
+        elif find_val > root.value:
+            return self.ssearch(root.right, value)
+        else:
+            return self.ssearch(root.left, value)
 
     def print_tree(self):
         """Print out all tree nodes
         as they are visited in
         a pre-order traversal."""
         # Your code goes here
-        pass
 
     def preorder_search(self, start, find_val):
         """Helper method - use this to create a 
