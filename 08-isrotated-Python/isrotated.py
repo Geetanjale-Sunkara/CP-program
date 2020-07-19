@@ -6,13 +6,15 @@
 
 def isrotated(str1, str2):
     # Your code goes here
+    if (str1[::-1] == str2):
+        return True
     x = str1[1:]+str1[0]
-    while x == str1:
+    while x != str1:
         if (x == str2):
             return True
         x = x[1:]+x[0]
     x = str1[len(str1)-1]+str1[:len(str1)-1]
-    while x == str1:
+    while x != str1:
         if (x == str2):
             return True
         x = x[len(x)-1]+x[:len(x)-1]
