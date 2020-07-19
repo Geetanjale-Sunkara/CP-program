@@ -12,6 +12,8 @@
 
 
 def fun_isfactorish(n):
+    if n < 0:
+        n = -n
     nn = str(n)
     l = list(map(int, list(nn)))
     if (len(l) != 3):
@@ -19,10 +21,10 @@ def fun_isfactorish(n):
     else:
         l.sort()
         for i in range(2):
-            if (l[i] == l[i+1]):
+            if (l[i] == l[i+1]) or l[i] == 0:
                 return False
             if n % l[i] != 0:
                 return False
-        if n % l[3] != 0:
+        if n % l[2] != 0:
             return False
         return True
