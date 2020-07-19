@@ -12,6 +12,6 @@ def median(a):
     elif (l == 1):
         return a[0]
     elif (l % 2 != 0):
-        return a[((l-1)/2)]
+        return a[int((l-1)/2)]
     else:
         return ((a[int((l/2)-1)]+a[int(l/2)])/2)
