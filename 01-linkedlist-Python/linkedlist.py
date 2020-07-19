@@ -49,7 +49,7 @@ class LinkedList(object):
         i = 0
         h = self.head
         prev = None
-        while (i < position):
+        while (i < position-1):
             prev = h
             h = h.next
             i += 1
@@ -64,6 +64,8 @@ class LinkedList(object):
         while h.value != value:
             prev = h
             h = h.next
+            if (h == None):
+                return None
         if (prev == None):
             self.head = h.next
         else:
