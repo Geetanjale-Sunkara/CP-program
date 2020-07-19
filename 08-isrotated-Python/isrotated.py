@@ -11,4 +11,9 @@ def isrotated(str1, str2):
         if (x == str2):
             return True
         x = x[1:]+x[0]
+    x = str1[len(str1)-1]+str1[:len(str1)-1]
+    while x == str1:
+        if (x == str2):
+            return True
+        x = x[len(x)-1]+x[:len(x)-1]
     return False
