@@ -38,7 +38,7 @@ class LinkedList(object):
             prev = h
             h = h.next
             i += 1
-        return h
+        return prev
 
     def insert(self, new_element, position):
         """Insert a new node at the given position.
@@ -64,5 +64,8 @@ class LinkedList(object):
         while h.value != value:
             prev = h
             h = h.next
-        prev.next = h.next
+        if (prev == None):
+            self.head = h.next
+        else:
+            prev.next = h.next
         return h
