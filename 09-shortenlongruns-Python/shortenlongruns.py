@@ -11,8 +11,10 @@
 
 def shortenlongruns(L, k):
     # Your code goes here
-    i = k
+    i = 1
+    out = [L[0]]
     while (i < len(L)):
-        L.pop(i)
-        i += (k-1)
-    return L
+        if (i % k != 0):
+            out.append(L[i])
+        i += 1
+    return out
