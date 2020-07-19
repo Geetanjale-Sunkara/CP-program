@@ -4,9 +4,10 @@
 
 
 def fun_kth_occurrences(s, n):
-    s = "".join(sorted(list(s)))
+    l = list(s)
+    s = "".join(sorted(l, key=l.count, reverse=True))
     ss = ""
     for i in s:
         if i not in ss:
             ss += i
-    return ss[n]
+    return ss[n-1]
