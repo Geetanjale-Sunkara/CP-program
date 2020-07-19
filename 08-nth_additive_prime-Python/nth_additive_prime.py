@@ -4,7 +4,9 @@
 # is also prime, so 113 is an Additive Prime. fun_nth_additive_prime(0) returns 2
 
 
-def isprime(self, num):
+def isprime(num):
+    if (num == 4):
+        return False
     for i in range(2, num//2):
         if (num % i == 0):
             return False
@@ -12,15 +14,15 @@ def isprime(self, num):
 
 
 def fun_nth_additive_prime(n):
-    cnt = 0
-    i = 2
+    cnt = -1
+    ii = 2
     while (cnt < n):
-        nn = str(n)
+        nn = str(ii)
         l = list(map(int, list(nn)))
-        sum = 0
+        summ = 0
         for i in l:
-            sum += i
-        if (self.isprime(i)):
+            summ += i
+        if (isprime(ii) and isprime(summ)):
             cnt += 1
-        i += 1
-    return i-1
+        ii += 1
+    return ii-1
