@@ -47,6 +47,8 @@ class BST(object):
 
     def search(self, find_val):
         # Your code goes here
+        if (type(find_val) != type(self.root.value)):
+            return False
         return self.preorder_search(self.root, find_val)
 
     def preorder_search(self, root, value):
