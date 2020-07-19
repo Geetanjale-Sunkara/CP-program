@@ -14,5 +14,5 @@ def shortenlongruns(L, k):
     i = k
     while (i < len(L)):
         L.pop(i)
-        i += k
+        i += (k-1)
     return L
