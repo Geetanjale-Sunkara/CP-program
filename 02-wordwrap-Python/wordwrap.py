@@ -20,7 +20,7 @@ def fun_wordwrap(s, n):
     s = s.strip()
     s = s.replace(" ", "-")
     i = n
-    while (i < len(n)):
+    while (i < len(s)):
         s = s[:i]+"\n"+s[i:]
-        i += n
+        i += n+1
     return s
