@@ -10,6 +10,6 @@ def smallestdifference(a):
     a.sort()
     mindiff = max(a)
     for i in range(len(a)-1):
-        if (mindiff > a[i]-a[i+1]):
-            mindiff = a[i]-a[i+1]
+        if (mindiff > abs(a[i]-a[i+1])):
+            mindiff = abs(a[i]-a[i+1])
     return mindiff
