@@ -20,4 +20,5 @@ def fun_nth_palindromic_prime(n):
         nn = str(ii)
         if (nn == nn[::-1] and isprime(ii)):
             cnt += 1
+        ii += 1
     return ii-1
