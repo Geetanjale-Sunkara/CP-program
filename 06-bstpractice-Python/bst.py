@@ -11,22 +11,22 @@ class BST(object):
 
     def insert(self, new_val):
         # Your code goes here
-        self.ins(self.root, new_val)
+        if self.root == None:
+            self.root = Node(data)
+        else:
+            self.ins(self.root, new_val)
 
     def ins(self, root, data):
-        if root == None:
-            root = Node(data)
-        else:
-            if root.value < data:
-                if root.right == None:
-                    root.right = Node(data)
-                else:
-                    ins(root.right, data)
+        if root.value < data:
+            if root.right == None:
+                root.right = Node(data)
             else:
-                if root.left == None:
-                    root.left = Node(data)
-                else:
-                    ins(root.left, data)
+                self.ins(root.right, data)
+        else:
+            if root.left == None:
+                root.left = Node(data)
+            else:
+                self.ins(root.left, data)
 
     def printSelf(self):
         # Your code goes here
