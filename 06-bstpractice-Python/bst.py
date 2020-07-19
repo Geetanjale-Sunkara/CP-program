@@ -17,7 +17,7 @@ class BST(object):
         if root == None:
             root = Node(data)
         else:
-            if root.val < data:
+            if root.value < data:
                 if root.right == None:
                     root.right = Node(data)
                 else:
@@ -30,7 +30,7 @@ class BST(object):
 
     def printSelf(self):
         # Your code goes here
-        return preorder_print(self.root, "")
+        return self.preorder_print(self.root, "")
 
     def preorder_print(self, root, traversal):
         """Helper method - use this to create a 
@@ -47,7 +47,7 @@ class BST(object):
 
     def search(self, find_val):
         # Your code goes here
-        return preorder_search(self.root, find_val)
+        return self.preorder_search(self.root, find_val)
 
     def preorder_search(self, root, value):
         """Helper method - use this to create a 
