@@ -12,11 +12,5 @@ def fun_matrixmultiply(m1, m2):
                 for k in range(len(m2)):
                     result[i][j] += m1[i][k]*m2[k][j]
         return result
-    elif len(m1) == len(m2[0]):
-        result = [[0 for i in range(len(m2))] for j in range(len(m1[0]))]
-        for i in range(len(m2)):
-            for j in range(len(m1[0])):
-                result[i][j] += m1[i][j]*m2[j][i]
-        return result
     else:
         return None
