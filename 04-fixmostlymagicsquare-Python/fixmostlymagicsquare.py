@@ -6,7 +6,7 @@
 # square.
 
 
-def fixmostlymagicsquare(L):
+def fixmostlymagicsquare(a):
     summ = []
     j = len(a)-1
     sd = 0
@@ -26,21 +26,15 @@ def fixmostlymagicsquare(L):
             if (j == len(a)-1):
                 summ.append(sr)
                 if (sr != sd):
-                    if (sr == sd2):
-                        sd = sd2
-                    else:
-                        for k in range(len(a)):
-                            l.append([i, k])
+                    for k in range(len(a)):
+                        l.append([i, k])
                 sr = 0
             sc += a[j][i]
             if (j == len(a)-1):
                 summ.append(sc)
                 if (sc != sd):
-                    if (sr == sd2):
-                        sd = sd2
-                    else:
-                        for k in range(len(a)):
-                            l.append([k, i])
+                    for k in range(len(a)):
+                        l.append([k, i])
                 sc = 0
     l = sorted(l, key=l.count, reverse=True)
     summ = sorted(summ, key=summ.count, reverse=True)
