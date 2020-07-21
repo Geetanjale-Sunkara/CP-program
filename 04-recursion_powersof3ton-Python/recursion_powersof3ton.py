@@ -8,7 +8,7 @@ import math
 def recursion_powersof3ton(n):
     if math.floor(n) == 1 or math.floor(n) == 2:
         return [1]
-    elif math.floor(n) == 0:
+    elif math.floor(n) <= 0:
         return None
     l = recursion_powersof3ton(n/3)
     l.append(l[len(l)-1]*3)
