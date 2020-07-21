@@ -8,6 +8,6 @@ def canqueenattack(qR, qC, oR, oC):
     # Your code goes here
     if qR == oR or qC == oC:
         return True
-    elif (qR == oR-1 and qC == oC-1) or (qR == oR+1 and oC == oR+1):
+    elif (oR-qR == oC-qC):
         return True
     return False
