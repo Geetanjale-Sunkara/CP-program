@@ -20,9 +20,9 @@
 
 def binarysearch(L, lo, hi, x):
     if hi >= lo:
-        mid = lo+(hi-1)//2
+        mid = (lo+hi)//2
         if L[mid] == x:
-            return (mid, x)
+            return [(mid, x), ]
         elif L[mid] > x:
             l = [(mid, L[mid]), ]
             ll = binarysearch(L, lo, mid-1, x)
