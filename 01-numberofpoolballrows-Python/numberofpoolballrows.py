@@ -9,7 +9,7 @@
 def fun_numberofpoolballrows(balls):
     i = 1
     sum = 0
-    while(sum <= balls):
+    while(sum < balls):
         sum += i
         i += 1
-    return i
+    return i-1
