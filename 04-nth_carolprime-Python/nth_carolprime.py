@@ -9,6 +9,15 @@
 # for primality (and you may need to think about that hint for a while for it to make sense!).
 
 
+def isprime(num):
+    if (num == 4):
+        return False
+    for i in range(2, num//2):
+        if (num % i == 0):
+            return False
+    return True
+
+
 def fun_nth_carolprime(n):
     i = 3
     cnt = -1
