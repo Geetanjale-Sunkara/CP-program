@@ -19,7 +19,7 @@ def isprime(num):
 
 
 def fun_nth_carolprime(n):
-    i = 3
+    i = 2
     cnt = -1
     while (cnt < n):
         if(isprime(i)):
