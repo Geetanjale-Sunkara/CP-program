@@ -15,9 +15,18 @@ def longestdigitrun(n):
     for i in range(1, len(l)):
         if (l[i-1] == l[i]):
             cnt += 1
+            if (i == len(l)-1):
+                if (mcnt < cnt):
+                    num = l[i-1]
+                    mcnt = cnt
+                elif (mcnt == cnt and num > l[i-1]):
+                    num = l[i-1]
+                cnt = 0
         else:
             if (mcnt < cnt):
                 num = l[i-1]
-            elif (mcnt == cnt and num < l[i-1]):
+                mcnt = cnt
+            elif (mcnt == cnt and num > l[i-1]):
                 num = l[i-1]
+            cnt = 0
     return num
