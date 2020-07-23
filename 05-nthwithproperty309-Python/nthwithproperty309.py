@@ -11,23 +11,23 @@ def is309(n):
         return False
     if l.count(1) == 0:
         return False
-        if l.count(2) == 0:
-            return False
-        if l.count(3) == 0:
-            return False
-        if l.count(4) == 0:
-            return False
-        if l.count(5) == 0:
-            return False
-        if l.count(6) == 0:
-            return False
-        if l.count(7) == 0:
-            return False
-        if l.count(8) == 0:
-            return False
-        if l.count(9) == 0:
-            return False
-        return True
+    if l.count(2) == 0:
+        return False
+    if l.count(3) == 0:
+        return False
+    if l.count(4) == 0:
+        return False
+    if l.count(5) == 0:
+        return False
+    if l.count(6) == 0:
+        return False
+    if l.count(7) == 0:
+        return False
+    if l.count(8) == 0:
+        return False
+    if l.count(9) == 0:
+        return False
+    return True
 
 
 def nthwithproperty309(n):
