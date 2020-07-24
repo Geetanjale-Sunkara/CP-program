@@ -18,7 +18,7 @@ def isugly(n):
     if (isprime(n)):
         return False
     l = [2, 3, 5]
-    for i in range(2, n//2):
+    for i in range(2, n//2+1):
         if isprime(i):
             if (n % i == 0 and (i not in l)):
                 return False
