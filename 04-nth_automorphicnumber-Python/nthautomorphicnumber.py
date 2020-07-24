@@ -17,4 +17,4 @@ def nthautomorphicnumbers(n):
         i += 1
         if (isaotomorphic(i)):
             cnt += 1
-    return i
+        return i
