@@ -11,7 +11,7 @@ def isplychrel(n):
     while n != int((str(n))[::-1]):
         n = n+int((str(n))[::-1])
         i += 1
-        if i == 10:
+        if i == 30:
             f = True
             break
     return f
