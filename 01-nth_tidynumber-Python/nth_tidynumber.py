@@ -9,7 +9,7 @@
 
 def istidy(n):
     l = list(map(int, list(str(n))))
-    if (l == sorted(l, recerse=True)):
+    if (l == sorted(l)):
         return True
     return False
 
