@@ -46,7 +46,6 @@ def nthautomorphicnumbers(n):
                 l.append(num2)
         l1 += 1
         l2 += 1
-    print(l)
     if len(l) == n:
         return l[len(l)-1]
     else:
