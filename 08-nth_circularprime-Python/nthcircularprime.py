@@ -9,7 +9,7 @@
 def isprime(num):
     if (num == 4):
         return False
-    for i in range(2, num//2):
+    for i in range(2, int(num**(1/2))+1):
         if (num % i == 0):
             return False
     return True
@@ -17,18 +17,28 @@ def isprime(num):
 
 def iscircularprime(n):
     if isprime(n):
-        num = (n % 10)*10**(len(str(n))-1)+n // (10**(len(str(n))-1))
+        if (n < 9):
+            return True
+        l = []
+        num = (n % 10)*10**(len(str(n))-1)+n // (10)
         while (num != n):
-            if (isprime(num) == False):
+            if len(str(num)) == len(str(n)):
+                l.append(num)
+            else:
+                break
+            num = (num % 10)*10**(len(str(num))-1)+num // (10)
+        if (l == [] or len(l) != len(str(n))-1):
+            return False
+        for i in l:
+            if (isprime(i) == False):
                 return False
-            num = (num % 10)*10**(len(str(num))-1)+num//(10**(len(str(num))-1))
         return True
     return False
 
 
 def nthcircularprime(n):
     i = 2
-    cnt = 0
+    cnt = 1
     while (cnt < n):
         i += 1
         if (iscircularprime(i)):
