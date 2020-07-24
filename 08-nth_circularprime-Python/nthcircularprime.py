@@ -17,13 +17,13 @@ def isprime(num):
 
 def iscircularprime(n):
     if isprime(n):
-        num = (n % 10)*10**(len(str(n))-1)+n % (10**(len(str(n))-1))
+        num = (n % 10)*10**(len(str(n))-1)+n // (10**(len(str(n))-1))
         while (num != n):
             if (isprime(num) == False):
                 return False
-            num = (n % 10)*10**(len(str(n))-1)+n % (10**(len(str(n))-1))
+            num = (num % 10)*10**(len(str(num))-1)+num//(10**(len(str(num))-1))
         return True
-        return False
+    return False
 
 
 def nthcircularprime(n):
