@@ -12,7 +12,9 @@ def leastfrequentletters(s):
     s = s.lower()
     st = ""
     for i in s:
-        if i != " " or i != "\'" or i != "!" or i != "?":
+        if i == " " or i == "\'" or i == "!" or i == "?":
+            pass
+        else:
             if (s.count(i) == 1):
                 st += i
-    return st
+    return "".join(sorted(st))
