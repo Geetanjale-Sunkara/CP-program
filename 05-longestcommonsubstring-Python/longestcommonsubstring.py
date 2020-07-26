@@ -23,7 +23,9 @@ def longestcommonsubstring(s1, s2):
                 if cc > l:
                     lcs = []
                     l = cc
-                    lcs.append(s1[i-c+1:i+1])
+                    lcs.append(s1[i-cc+1:i+1])
                 elif cc == l:
-                    lcs.append(s1[i-c+1:i+1])
+                    lcs.append(s1[i-cc+1:i+1])
+    if (lcs == []):
+        return ""
     return lcs[len(lcs)-1]
