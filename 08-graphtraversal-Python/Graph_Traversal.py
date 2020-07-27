@@ -144,7 +144,19 @@ class Graph(object):
         MODIFIES: the value of the visited property of nodes in self.nodes 
         RETURN: a list of the traversed node values (integers).
         """
-        pass
+        queue = [start_node]
+        l = []
+        while (len(queue) > 0):
+            t = queue.pop(0)
+            if t.visited:
+                continue
+            else:
+                l.append(t)
+                t.visited = True
+                for i in t.edges:
+                    if i.node_to.value != t.value and i.node_to.visited == False:
+                        l.extend(self.dfs_helper(i.node_to))
+        return list(map(lambda v: v.value, l))
 
     def dfs(self, start_node_num):
         """Outputs a list of numbers corresponding to the traversed nodes
@@ -167,9 +179,23 @@ class Graph(object):
         ARGUMENTS: start_node_num is the node number (integer)
         MODIFIES: the value of the visited property of nodes in self.nodes
         RETURN: a list of the node values (integers)."""
-        pass
+        self._clear_visited()
+        start_node = self.find_node(start_node_num)
+        queue = [start_node]
+        l = []
+        while (len(queue) > 0):
+            t = queue.pop(0)
+            if t.visited:
+                continue
+            else:
+                l.append(t)
+                t.visited = True
+                for i in t.edges:
+                    if i.node_to.value != t.value and i.node_to.visited == False:
+                        queue.append(i.node_to)
+        return list(map(lambda v: v.value, l))
 
     def bfs_names(self, start_node_num):
         """Return the results of bfs with numbers converted to names."""
-        del ret_list[0: len(ret_list)]
+        # del ret_list[0: len(ret_list)]
         return [self.node_names[num] for num in self.bfs(start_node_num)]
