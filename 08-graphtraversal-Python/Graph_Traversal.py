@@ -156,7 +156,7 @@ class Graph(object):
                 for i in t.edges:
                     if i.node_to.value != t.value and i.node_to.visited == False:
                         l.extend(self.dfs_helper(i.node_to))
-        return list(map(lambda v: v.value, l))
+        return l
 
     def dfs(self, start_node_num):
         """Outputs a list of numbers corresponding to the traversed nodes
@@ -166,7 +166,7 @@ class Graph(object):
         RETURN: a list of the node values (integers)."""
         self._clear_visited()
         start_node = self.find_node(start_node_num)
-        return self.dfs_helper(start_node)
+        return list(map(lambda v: v.value, self.dfs_helper(start_node)))
 
     def dfs_names(self, start_node_num):
         """Return the results of dfs with numbers converted to names."""
